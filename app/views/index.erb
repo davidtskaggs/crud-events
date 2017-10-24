@@ -1,0 +1,22 @@
+<% if @errors && !logged_in? %>
+<ul>
+    <li><%= @errors %></li>
+  <% end %>
+</ul>
+
+<div class="container">
+  <h1>Potluck Party</h1>
+  <h3>Upcoming...</h3>
+  <% @upcoming_potlucks.each do |potluck| %>
+  <% if potluck.starts_at > Time.now %>
+  <ul>
+    <li>
+      <span> <%= potluck.name %></span>
+      <span>| <%= potluck.location %></span>
+      <span>| <%= potluck.starts_at %></span>
+    </li>
+  </ul>
+  <% end %>
+<% end %>
+
+</div>

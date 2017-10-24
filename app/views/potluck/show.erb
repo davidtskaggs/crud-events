@@ -1,0 +1,25 @@
+<% if @errors  %>
+<ul>
+    <li><%= @errors %></li>
+  <% end %>
+</ul>
+
+
+<div>
+  <h1>Potluck Details</h1>
+ <ul>
+    <li>
+      <span><%= @potluck.name %></span>
+      <span>| <%= @potluck.name %></span>
+      <span>| <%= @potluck.starts_at %></span>
+      <span>| Hosted by: <%= @potluck.user.username.capitalize! %></span>
+    </li>
+  </ul>
+  <p><a href="/potlucks/<%= @potluck.id %>/ticket/new">RSVP!</a></p>
+  <p><a href="/potlucks/<%= @potluck.id %>/edit">Edit</a></p>
+  <form action="/potlucks/<%= @potluck.id %>" method="post">
+    <input type="hidden" id="hidden" name="_method" value="delete">
+    <input type="submit" class="btn btn-danger" value="Delete!">
+  </form>
+</div>
+</div>

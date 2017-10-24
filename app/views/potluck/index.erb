@@ -1,0 +1,10 @@
+<% @potlucks.each do |potluck| %>
+  <ul>
+    <li>
+      <span> <a href="/potlucks/<%= potluck.id%>"><%= potluck.name %></a></span>
+      <span>| <%= potluck.location %></span>
+      <span>| <%= potluck.starts_at %></span>
+      <span>| Hosted by: <%= potluck.user.username.capitalize! %></span>
+    </li>
+  </ul>
+<% end %>

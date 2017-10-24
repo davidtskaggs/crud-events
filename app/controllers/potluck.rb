@@ -82,7 +82,4 @@ post '/potlucks/:potluck_id/ticket' do
   else
     redirect '/'
   end
-
 end
-
-

@@ -1,13 +1,10 @@
 <div>
  <form action="/potlucks/<%= @potluck.id %>" method="post">
   <input type="hidden" name="_method" value="put">
-
   <label for="name">name<label>
     <input type="text" name="potluck[name]" value="<%= @potluck.name %>">
-
     <label for="location">location<label>
     <input type="text" name="potluck[location]" value="<%= @potluck.location %>">
-
     <label for="starts_at">date/time<label>
     <input type="text" name="potluck[starts_at]" placeholder="2017-10-24 06:00:00" value="<%= @potluck.starts_at %>">
     <input type="submit" value="Update"/>

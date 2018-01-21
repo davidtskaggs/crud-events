@@ -1,9 +1,8 @@
 <% if @errors && !logged_in? %>
-<ul>
-    <li><%= @errors %></li>
-  <% end %>
-</ul>
-
+  <ul>
+    <li><%= @errors %></li>  
+  </ul>
+<% end %>
 <div class="container">
   <h1>Potluck Party</h1>
   <h3>Upcoming...</h3>
@@ -18,5 +17,4 @@
   </ul>
   <% end %>
 <% end %>
-
 </div>
